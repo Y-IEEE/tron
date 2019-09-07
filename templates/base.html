@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>{{ title }} - Tron</title>
+        {% else %}
+        <title>Tron</title>
+        {% endif %}
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#00aff0">
+        <link rel="stylesheet" href="/static/css/main.css">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h2 id="logo"><a href="{{ url_for('index') }}">Tron</a></h2>
+                <ul>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="errors">
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            &copy; Y-IEEE
+        </footer>
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>
