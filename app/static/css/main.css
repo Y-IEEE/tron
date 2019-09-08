@@ -1,4 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #222;
     color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 20px;
+}
+a {
+    color: inherit;
+}
+h2 {
+    font-size: 40px;
+}
+h2 a {
+    text-decoration: none;
 }
