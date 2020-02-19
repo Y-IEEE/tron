@@ -1,1 +1,0 @@
-Explanation from Reddit on the tech stack behind r/place: https://redditblog.com/2017/04/13/how-we-built-rplace/
